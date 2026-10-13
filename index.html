@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>˚₊‧꒰ა † ⴷⵟⵎ गᎮⵔगѦɃᗐⵍⵋ † ໒꒱‧₊˚</title>
+    <style>
+        /* Сброс и базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0b0f;
+            font-family: 'Segoe UI', 'Courier New', monospace;
+            color: #d4d4d4;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: radial-gradient(circle at 20% 30%, #1a1a24 0%, #0a0a0e 90%);
+        }
+
+        /* Основной контейнер */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.75);
+            backdrop-filter: blur(3px);
+            border: 1px solid #2a2a35;
+            border-radius: 32px;
+            padding: 2rem 2rem 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px #3a3a4a inset;
+        }
+
+        /* Заголовок */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 3px;
+            color: #c8b8d8;
+            text-shadow: 0 0 18px #4a2b6b, 0 0 6px #1e1e2e, 0 0 30px #6a3a8a;
+            font-weight: 400;
+            word-break: break-word;
+            line-height: 1.4;
+            padding: 0 0.5rem;
+        }
+
+        .subhead {
+            color: #6a6a7a;
+            font-style: italic;
+            font-size: 1.1rem;
+            border-bottom: 1px dashed #2e2e3e;
+            padding-bottom: 0.8rem;
+            margin-top: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* Сетка кнопок */
+        .buttons-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.9rem;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .btn {
+            background: #16161e;
+            border: 1px solid #2f2f3f;
+            color: #c0c0d0;
+            padding: 0.9rem 1.8rem;
+            font-size: 1.15rem;
+            font-family: inherit;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 0 #0a0a0e, 0 0 0 1px #252530 inset;
+            flex: 0 1 auto;
+            backdrop-filter: blur(2px);
+            font-weight: 600;
+            min-width: 150px;
+        }
+
+        .btn:hover {
+            background: #22222e;
+            border-color: #6a4a8a;
+            color: #ffffff;
+            box-shadow: 0 6px 0 #0a0a0e, 0 0 15px #4a2b6b, 0 0 0 1px #7a5a9a inset;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #0a0a0e, 0 0 10px #3a1b5b;
+        }
+
+        /* Область контента */
+        .content-area {
+            background: #0e0e14;
+            border: 1px solid #26263a;
+            border-radius: 28px;
+            padding: 2rem 2rem 1.8rem;
+            min-height: 280px;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7), 0 8px 0 #050508;
+            transition: border-color 0.2s;
+        }
+
+        .content-area h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #bcbcd0;
+            letter-spacing: 3px;
+            margin-bottom: 1.2rem;
+            border-left: 6px solid #6a3a8a;
+            padding-left: 1.2rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px #2a1a3a;
+        }
+
+        .content-area h3 {
+            color: #c0a0e0;
+            margin: 1.6rem 0 0.9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #3a2a4a;
+            padding-bottom: 6px;
+            text-transform: uppercase;
+            font-size: 1.15rem;
+        }
+
+        .content-area p, .content-area li {
+            color: #b8b8c8;
+            margin-bottom: 0.6rem;
+            font-size: 1.08rem;
+            padding-left: 0.5rem;
+        }
+
+        .content-area ul, .content-area ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            list-style: none;
+        }
+
+        .content-area li {
+            padding-left: 0.3rem;
+            position: relative;
+        }
+
+        .content-area strong {
+            color: #d0b0e0;
+            font-weight: 500;
+            text-shadow: 0 0 6px #3a2a4a;
+        }
+
+        .content-area em {
+            color: #9a8aaa;
+            font-style: italic;
+        }
+
+        .highlight {
+            background: #1a1a26;
+            border-left: 4px solid #7a4a9a;
+            padding: 0.9rem 1.3rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.3rem 0;
+            font-style: normal;
+            color: #cac0da;
+            box-shadow: 0 2px 12px rgba(80, 40, 120, 0.2);
+        }
+
+        .warning {
+            border-left-color: #aa3a3a;
+            background: #1e1418;
+            color: #dab0b0;
+        }
+
+        .rule-item {
+            margin-bottom: 0.9rem;
+            padding-left: 0.2rem;
+        }
+
+        .rule-num {
+            color: #b080d0;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .anon-link {
+            display: inline-block;
+            margin-top: 0.6rem;
+            color: #b090e0;
+            text-decoration: none;
+            border-bottom: 1px dashed #7a5a9a;
+            padding: 2px 4px;
+            word-break: break-all;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+        }
+
+        .anon-link:hover {
+            color: #e0c0ff;
+            border-bottom-color: #b090e0;
+            text-shadow: 0 0 8px #7a4aaa;
+        }
+
+        /* Стили для ролей */
+        .roles-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.2rem;
+            background: #13131c;
+            border-radius: 16px;
+            border: 1px solid #2a2a3a;
+            font-size: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #c0c0d0;
+        }
+
+        .role-category {
+            margin-bottom: 1.2rem;
+            background: #0f0f17;
+            border-radius: 16px;
+            padding: 1rem 1.2rem 1.2rem;
+            border: 1px solid #22222e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .role-category h3 {
+            margin-top: 0;
+            border-bottom: 1px dashed #3a2a4a;
+            padding-bottom: 8px;
+            color: #b8a0d0;
+        }
+
+        .role-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 4px 18px;
+            margin-top: 8px;
+        }
+
+        .role-list li {
+            padding: 4px 0;
+            color: #c8c8d8;
+            font-size: 1.02rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1a1a24;
+        }
+
+        .role-list li span:first-child {
+            padding-right: 10px;
+        }
+
+        .role-status {
+            font-size: 1.1rem;
+            filter: drop-shadow(0 0 4px rgba(140, 80, 200, 0.4));
+        }
+
+        /* Стили для чистки */
+        .clean-block {
+            background: #11111a;
+            border-radius: 18px;
+            padding: 1.3rem 1.5rem;
+            margin: 1.2rem 0;
+            border: 1px solid #2a2a3a;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .clean-block p {
+            padding-left: 0;
+        }
+
+        .clean-block .big-number {
+            font-size: 1.9rem;
+            color: #d0b0e0;
+            font-weight: 600;
+            text-shadow: 0 0 12px #6a3a8a;
+            letter-spacing: 1px;
+        }
+
+        .time-highlight {
+            color: #c0a0e0;
+            font-weight: 500;
+            background: #1e1a2e;
+            padding: 2px 10px;
+            border-radius: 20px;
+            border: 1px solid #3a2a5a;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Стили для администрации */
+        .admin-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #11111a;
+            border-radius: 16px;
+            padding: 1rem 1.3rem;
+            margin-bottom: 0.8rem;
+            border: 1px solid #2a2a3a;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.25s ease;
+        }
+
+        .admin-card:hover {
+            border-color: #5a3a7a;
+            background: #16161f;
+            box-shadow: 0 6px 18px rgba(80, 40, 120, 0.3);
+            transform: translateX(4px);
+        }
+
+        .admin-icon {
+            font-size: 1.8rem;
+            filter: drop-shadow(0 0 8px rgba(140, 80, 200, 0.5));
+            flex-shrink: 0;
+        }
+
+        .admin-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-rank {
+            font-size: 0.85rem;
+            color: #9a8aaa;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .admin-tag {
+            font-size: 1.15rem;
+            color: #d0b0e0;
+            font-weight: 500;
+            text-shadow: 0 0 6px #3a2a4a;
+            text-decoration: none;
+            transition: color 0.2s;
+            word-break: break-all;
+        }
+
+        .admin-tag:hover {
+            color: #e8d0ff;
+            text-shadow: 0 0 10px #7a4aaa;
+        }
+
+        .owner-card { border-left: 4px solid #d0a020; }
+        .co-owner-card { border-left: 4px solid #c060c0; }
+        .senior-card { border-left: 4px solid #6090d0; }
+        .junior-card { border-left: 4px solid #50a080; }
+
+        /* Стили для терминов (доп. информация) */
+        .term-card {
+            background: #11111a;
+            border-radius: 16px;
+            padding: 1rem 1.3rem;
+            margin-bottom: 0.9rem;
+            border: 1px solid #2a2a3a;
+            border-left: 4px solid #6a4a9a;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.25s ease;
+        }
+
+        .term-card:hover {
+            background: #15151f;
+            border-left-color: #9a6aca;
+            box-shadow: 0 6px 16px rgba(80, 40, 120, 0.3);
+            transform: translateX(4px);
+        }
+
+        .term-name {
+            color: #d0b0e0;
+            font-weight: 600;
+            font-size: 1.15rem;
+            text-shadow: 0 0 6px #3a2a4a;
+            display: block;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .term-desc {
+            color: #b0b0c0;
+            font-size: 1.02rem;
+            padding-left: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .intro-block {
+            background: #1a1a26;
+            border-left: 4px solid #7a4a9a;
+            padding: 1rem 1.3rem;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 1.5rem;
+            color: #cac0da;
+            font-style: italic;
+        }
+
+        .tiktok-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 0.5rem;
+            color: #e0c0ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.15rem;
+            padding: 0.6rem 1.2rem;
+            background: #1a1a26;
+            border-radius: 40px;
+            border: 1px solid #5a3a7a;
+            transition: all 0.25s ease;
+            letter-spacing: 1px;
+        }
+
+        .tiktok-link:hover {
+            background: #22222e;
+            border-color: #9a6aca;
+            box-shadow: 0 0 20px rgba(140, 80, 200, 0.4);
+            transform: translateY(-2px);
+            color: #f0e0ff;
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #3a3a4a;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            border-top: 1px solid #1e1e2a;
+            padding-top: 1.4rem;
+            width: 100%;
+        }
+
+        /* Адаптив */
+        @media (max-width: 650px) {
+            .container { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.15rem; letter-spacing: 1px; }
+            .btn { padding: 0.7rem 1.2rem; font-size: 0.95rem; min-width: 120px; letter-spacing: 1px; }
+            .content-area { padding: 1.5rem 1rem; }
+            .content-area h2 { font-size: 1.5rem; }
+            .buttons-grid { gap: 0.6rem; }
+            .role-list { grid-template-columns: 1fr; }
+            .clean-block .big-number { font-size: 1.5rem; }
+            .admin-card { padding: 0.8rem 1rem; }
+            .admin-tag { font-size: 1rem; }
+            .tiktok-link { font-size: 1rem; padding: 0.5rem 1rem; }
+        }
+
+        @media (max-width: 400px) {
+            .btn { width: 100%; text-align: center; }
+            h1 { font-size: 1rem; letter-spacing: 0.5px; }
+        }
+
+        /* Анимация появления текста */
+        .fade-content {
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.3; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>˚₊‧꒰ა † ⴷⵟⵎ गᎮⵔगѦɃᗐⵍⵋ † ໒꒱‧₊˚</h1>
+        <div class="subhead">тёмный архив · группа · 18+</div>
+    </header>
+
+    <!-- Кнопки навигации -->
+    <div class="buttons-grid">
+        <button class="btn" data-section="rules">📜 Правила</button>
+        <button class="btn" data-section="roles">🎭 Роли</button>
+        <button class="btn" data-section="cleaning">🧹 Чистка и норма</button>
+        <button class="btn" data-section="rest">⛔ Рест и бронь</button>
+        <button class="btn" data-section="admins">👁️ Администрация</button>
+        <button class="btn" data-section="info">📎 Доп. информация</button>
+    </div>
+
+    <!-- Сюда подгружается контент -->
+    <div id="content" class="content-area">
+        <!-- Начальный экран -->
+        <h2>Добро пожаловать</h2>
+        <p>Ты зашёл в место, где истории оживают. Выбери раздел выше, чтобы ознакомиться с правилами, ролями или другой важной информацией.</p>
+        <div class="highlight">
+            <strong>▸ Внимание:</strong> группа посвящена крипипасте, мистике и хоррору. Уважай атмосферу и участников.
+        </div>
+        <p><em>Нажми на любую кнопку, чтобы загрузить соответствующий раздел.</em></p>
+    </div>
+
+    <footer>
+        2025 · ВСЕ ИСТОРИИ ВЫМЫШЛЕНЫ
+    </footer>
+</div>
+
+<script>
+    (function() {
+        // Данные для разделов (можно легко редактировать)
+        const sections = {
+            rules: {
+                title: '📜 ПРАВИЛА ГРУППЫ',
+                content: `
+                    <div class="rule-item"><span class="rule-num">1.</span> <strong>Уважение.</strong> Относитесь друг к другу с уважением. Не оскорбляем других участников, не устраиваем травлю и не переходим на личности, родителей и т. д. Даже если это шутка, такое нежелательно, так как другим может быть обидно.</div>
+                    <div class="rule-item"><span class="rule-num">2.</span> <strong>Конфликты.</strong> Если конфликт всё же случился, решайте его спокойно или же попытайтесь завершить конфликт лично.</div>
+                    <div class="rule-item"><span class="rule-num">3.</span> <strong>Спам.</strong> Не засоряйте чат одинаковыми сообщениями, стикерами, гифками или бессмысленными словами по типу «плаьаддвслшмшпьа». Спамом считаются 10 таких одинаковых сообщений подряд.</div>
+                    <div class="rule-item"><span class="rule-num">4.</span> <strong>Реклама.</strong> Без разрешения владельца не рекламируем другие флуды, каналы и даже свои.</div>
+                    <div class="rule-item"><span class="rule-num">5.</span> <strong>Личные данные.</strong> Не распространяем чужие личные данные, переписки и фотографии без согласия человека.</div>
+                    <div class="rule-item"><span class="rule-num">6.</span> <strong>Провокации и дискриминация.</strong> Не унижаем участников из-за внешности, ориентации, интересов или других личных особенностей. Также не провоцируем участников на конфликты.</div>
+                    <div class="rule-item"><span class="rule-num">7.</span> <strong>Администрация.</strong> Уважаем работу администрации. Если не согласны с тем или иным решением, обсудите это лично с админом или владельцем.</div>
+                    <div class="rule-item"><span class="rule-num">8.</span> <strong>Шок-контент.</strong> Запрещён сексуальный контент и расчленёнка, будь то видео, стикер или гифка.</div>
+                    <div class="rule-item"><span class="rule-num">9.</span> <strong>Калл.</strong> Калл делают только админы/владелец или по просьбе самого админа/владельца. Если калл был сделан случайно, первый раз прощается, но ошибку стоит запомнить.</div>
+                    <div class="rule-item"><span class="rule-num">10.</span> <strong>Комфорт.</strong> Не забываем, что флуд — это общение, где мы находим новых друзей и знакомых, поэтому относимся друг к другу хорошо.</div>
+
+                    <div class="highlight warning">⚠️ Незнание правил не освобождает от наказания.</div>
+
+                    <h3>📨 Анонимное сообщение</h3>
+                    <p>Если вы заметили нарушение или хотите пожаловаться на участника, но боитесь сделать это открыто, можете написать в анонимный бот (желательно со скринами нарушения/жалобы). Владелец рассмотрит ваше обращение.</p>
+                    <p>Просим не использовать бота для ложных обвинений и сведения личных счётов.</p>
+                    <p><a class="anon-link" href="https://t.me/anonaskbot?start=8vkzuqs4tj8ix16" target="_blank" rel="noopener noreferrer">t.me/anonaskbot?start=8vkzuqs4tj8ix16</a></p>
+                `
+            },
+            roles: {
+                title: '🎭 РОЛИ ПЕРСОНАЖЕЙ',
+                content: `
+                    <div class="roles-legend">
+                        <div class="legend-item"><span>Занято</span> <span class="role-status">🪓</span></div>
+                        <div class="legend-item"><span>Свободно</span> <span class="role-status">—</span></div>
+                        <div class="legend-item"><span>Бронь</span> <span class="role-status">🌲</span></div>
+                    </div>
+
+                    <div class="role-category">
+                        <h3>Безликие</h3>
+                        <ul class="role-list">
+                            <li><span>Слендермен</span> <span class="role-status">🪓</span></li>
+                            <li><span>Оффендермен</span> <span class="role-status">🪓</span></li>
+                            <li><span>Сплендормен</span> <span class="role-status">—</span></li>
+                            <li><span>Трендермен</span> <span class="role-status">—</span></li>
+                            <li><span>Кабаддатх</span> <span class="role-status">—</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="role-category">
+                        <h3>Убийцы</h3>
+                        <ul class="role-list">
+                            <li><span>Джефф убийца</span> <span class="role-status">🪓</span></li>
+                            <li><span>Нина убийца</span> <span class="role-status">—</span></li>
+                            <li><span>Джейн убийца</span> <span class="role-status">🪓</span></li>
+                            <li><span>Джейн Вечная</span> <span class="role-status">🪓</span></li>
+                            <li><span>Клокворк</span> <span class="role-status">—</span></li>
+                            <li><span>Смертоносный Лью</span> <span class="role-status">🪓</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="role-category">
+                        <h3>Дети / подростки</h3>
+                        <ul class="role-list">
+                            <li><span>Бен Утопленник</span> <span class="role-status">—</span></li>
+                            <li><span>Салли Уильямс</span> <span class="role-status">—</span></li>
+                            <li><span>Кенди Поп</span> <span class="role-status">🪓</span></li>
+                            <li><span>Лулу</span> <span class="role-status">🪓</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="role-category">
+                        <h3>Существа</h3>
+                        <ul class="role-list">
+                            <li><span>Залго</span> <span class="role-status">—</span></li>
+                            <li><span>Джунджи Ангел</span> <span class="role-status">—</span></li>
+                            <li><span>Безглазый Джек</span> <span class="role-status">🪓</span></li>
+                            <li><span>Смеющийся Джек</span> <span class="role-status">🪓</span></li>
+                            <li><span>Смеющаяся Джилл</span> <span class="role-status">—</span></li>
+                            <li><span>Лазари</span> <span class="role-status">🪓</span></li>
+                            <li><span>Зеро</span> <span class="role-status">🪓</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="role-category">
+                        <h3>Прокси</h3>
+                        <ul class="role-list">
+                            <li><span>Тикки Тоби</span> <span class="role-status">🪓</span></li>
+                            <li><span>Тим Маски</span> <span class="role-status">🪓</span></li>
+                            <li><span>Худи</span> <span class="role-status">🪓</span></li>
+                            <li><span>Кейт</span> <span class="role-status">🪓</span></li>
+                            <li><span>Энни Меррик (Скалли)</span> <span class="role-status">🪓</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="role-category">
+                        <h3>Животные</h3>
+                        <ul class="role-list">
+                            <li><span>Смайл Дог</span> <span class="role-status">🪓</span></li>
+                            <li><span>Кот Гринни</span> <span class="role-status">—</span></li>
+                            <li><span>Кот-охотник</span> <span class="role-status">🪓</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="role-category">
+                        <h3>Остальные</h3>
+                        <ul class="role-list">
+                            <li><span>Дарк Линк</span> <span class="role-status">—</span></li>
+                            <li><span>Алекс Крэйли</span> <span class="role-status">🪓</span></li>
+                            <li><span>Фунный Доктор</span> <span class="role-status">—</span></li>
+                            <li><span>Sonic.EXE</span> <span class="role-status">🪓</span></li>
+                            <li><span>УКС-Вирус / Коди</span> <span class="role-status">—</span></li>
+                            <li><span>Медсестра Энн</span> <span class="role-status">—</span></li>
+                            <li><span>Суицидальная Сэди</span> <span class="role-status">—</span></li>
+                            <li><span>Бессердечный Лу</span> <span class="role-status">—</span></li>
+                            <li><span>Кукловод</span> <span class="role-status">🪓</span></li>
+                            <li><span>Джеффсон Создатель Игрушек</span> <span class="role-status">—</span></li>
+                            <li><span>Кагекао</span> <span class="role-status">🪓</span></li>
+                            <li><span>Лост Сильвер</span> <span class="role-status">—</span></li>
+                            <li><span>Кровавый Художник</span> <span class="role-status">🪓</span></li>
+                            <li><span>Демон Скай</span> <span class="role-status">🪓</span></li>
+                            <li><span>Хэбит</span> <span class="role-status">🪓</span></li>
+                        </ul>
+                    </div>
+                `
+            },
+            cleaning: {
+                title: '🧹 ЧИСТКА И НОРМА',
+                content: `
+                    <div class="clean-block">
+                        <p><strong>📌 Норма</strong></p>
+                        <p>Норма на данный момент составляет <span class="big-number">25</span> сообщений в неделю.</p>
+                    </div>
+
+                    <div class="clean-block">
+                        <p><strong>🧹 Чистка</strong></p>
+                        <p>Чистка будет каждое <strong>воскресенье</strong> в <span class="time-highlight">20:00 – 23:00</span>.</p>
+                        <p>Администрация заранее предупредит о ней.</p>
+                    </div>
+
+                    <div class="highlight">
+                        <strong>▸ Если вы находитесь во флуде меньше 3 дней</strong>, то вы считаетесь <strong>Нью</strong>. Поэтому в чистке выгонять вас никто не имеет права.
+                    </div>
+
+                    <div class="highlight">
+                        <strong>▸ Если вы в ресте</strong>, то во время чистки вас также беспокоить не будут.
+                    </div>
+                `
+            },
+            rest: {
+                title: '⛔ РЕСТ И БРОНЬ',
+                content: `
+                    <h3>Рест (отдых)</h3>
+                    <p>Если вы временно не можете быть активны, вы можете уйти в «рест» — статус, при котором вы не удаляетесь при чистке.</p>
+                    <ul>
+                        <li>Максимальный срок реста — 60 дней.</li>
+                        <li>Необходимо написать заявление в специальной теме или лично куратору.</li>
+                        <li>Во время реста вы не обязаны комментировать, но можете читать группу.</li>
+                        <li>Досрочный выход из реста — просто напишите об этом администрации.</li>
+                    </ul>
+                    <h3>Бронь</h3>
+                    <p>Бронь позволяет зарезервировать определённый контент или роль за вами.</p>
+                    <ul>
+                        <li><strong>Бронь темы:</strong> вы можете «забронировать» идею для крипипасты на 3 дня, чтобы никто не украл задумку. Для этого оставьте заявку с кратким описанием.</li>
+                        <li><strong>Бронь роли:</strong> если вы хотите получить особую роль (например, «Оформитель»), но пока не готовы — можно забронировать место на 7 дней.</li>
+                        <li>Просроченная бронь снимается автоматически.</li>
+                    </ul>
+                    <div class="highlight warning">⚠️ Злоупотребление бронированием (более 2 активных броней одновременно) запрещено.</div>
+                `
+            },
+            admins: {
+                title: '👁️ АДМИНИСТРАЦИЯ',
+                content: `
+                    <div class="admin-card owner-card">
+                        <div class="admin-icon">👑</div>
+                        <div class="admin-info">
+                            <span class="admin-rank">Владелец</span>
+                            <a class="admin-tag" href="https://t.me/Meowmememememe" target="_blank" rel="noopener noreferrer">@Meowmememememe</a>
+                        </div>
+                    </div>
+
+                    <div class="admin-card co-owner-card">
+                        <div class="admin-icon">🌟</div>
+                        <div class="admin-info">
+                            <span class="admin-rank">Совладелец</span>
+                            <a class="admin-tag" href="https://t.me/Katypro1257" target="_blank" rel="noopener noreferrer">@Katypro1257</a>
+                        </div>
+                    </div>
+
+                    <div class="admin-card senior-card">
+                        <div class="admin-icon">🛡️</div>
+                        <div class="admin-info">
+                            <span class="admin-rank">Старший Админ</span>
+                            <a class="admin-tag" href="https://t.me/Mapoxenka" target="_blank" rel="noopener noreferrer">@Mapoxenka</a>
+                        </div>
+                    </div>
+
+                    <div class="admin-card junior-card">
+                        <div class="admin-icon">⚔️</div>
+                        <div class="admin-info">
+                            <span class="admin-rank">Младший Админ</span>
+                            <a class="admin-tag" href="https://t.me/SW1TUK" target="_blank" rel="noopener noreferrer">@SW1TUK</a>
+                        </div>
+                    </div>
+
+                    <div class="admin-card junior-card">
+                        <div class="admin-icon">⚔️</div>
+                        <div class="admin-info">
+                            <span class="admin-rank">Младший Админ</span>
+                            <a class="admin-tag" href="https://t.me/Ivan_Byrmolda" target="_blank" rel="noopener noreferrer">@Ivan_Byrmolda</a>
+                        </div>
+                    </div>
+
+                    <div class="admin-card junior-card">
+                        <div class="admin-icon">⚔️</div>
+                        <div class="admin-info">
+                            <span class="admin-rank">Младший Админ</span>
+                            <a class="admin-tag" href="https://t.me/Fgrshll" target="_blank" rel="noopener noreferrer">@Fgrshll</a>
+                        </div>
+                    </div>
+
+                    <div class="highlight">
+                        <strong>▸ Связь:</strong> по любым вопросам обращайтесь к администрации в личные сообщения. Жалобы на модераторов принимаются только у владельца.
+                    </div>
+                `
+            },
+            info: {
+                title: '📎 ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ',
+                content: `
+                    <div class="intro-block">
+                        Впервые во флуде и пока не разбираетесь в терминах? Не стесняйтесь задавать вопросы!
+                    </div>
+
+                    <div class="term-card">
+                        <span class="term-name">🎲 Бинго / таблички</span>
+                        <p class="term-desc">Небольшие интерактивы, в которых участники отвечают на разные пункты и делятся фактами о себе.</p>
+                    </div>
+
+                    <div class="term-card">
+                        <span class="term-name">📝 Актив-посты</span>
+                        <p class="term-desc">Публикации с большим количеством вопросов, на которые можно отвечать отдельными сообщениями, набирая актив.</p>
+                    </div>
+
+                    <div class="term-card">
+                        <span class="term-name">🆕 Нью</span>
+                        <p class="term-desc">Новый участник флуда. Период, в течение которого вас считают новичком, зависит от правил конкретного флуда.</p>
+                    </div>
+
+                    <div class="term-card">
+                        <span class="term-name">📊 Норма</span>
+                        <p class="term-desc">Установленное количество сообщений, которое участник должен написать за неделю. Если активности недостаточно, во время чистки могут удалить из флуда.</p>
+                    </div>
+
+                    <div class="term-card">
+                        <span class="term-name">🌙 Рест</span>
+                        <p class="term-desc">Перерыв от общения во флуде. На время отдыха участника освобождают от выполнения нормы и не удаляют за неактивность.</p>
+                    </div>
+
+                    <div class="highlight">
+                        <strong>▸ Если хотите уйти из флуда</strong> — сообщите об уходе, укажите свою роль и, если хотите, причину. Также не забудьте отметить влд.
+                    </div>
+
+                    <p style="margin-top: 1.2rem; color: #c0b0d0;">Если что-то осталось непонятным, обращайтесь к администрации — вам обязательно помогут!</p>
+
+                    <h3>🎵 Наш TikTok</h3>
+                    <a class="tiktok-link" href="https://www.tiktok.com/@creppypasta_flood72" target="_blank" rel="noopener noreferrer">
+                        🎬 @creppypasta_flood72
+                    </a>
+                `
+            }
+        };
+
+        // Элементы
+        const contentDiv = document.getElementById('content');
+        const buttons = document.querySelectorAll('.btn');
+
+        // Функция отображения раздела
+        function renderSection(sectionKey) {
+            const section = sections[sectionKey];
+            if (!section) return;
+
+            // Формируем HTML с заголовком и контентом
+            const html = `
+                <div class="fade-content">
+                    <h2>${section.title}</h2>
+                    ${section.content}
+                </div>
+            `;
+
+            contentDiv.innerHTML = html;
+        }
+
+        // Навешиваем обработчики на кнопки
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const section = this.dataset.section;
+                if (section) {
+                    renderSection(section);
+                }
+            });
+        });
+    })();
+</script>
+</body>
+</html>
